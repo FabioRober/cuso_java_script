@@ -1,0 +1,233 @@
+INTRO    
+    JavaScript - Case sensitive - diferencia maiusculas e minusculas
+
+    DOM = Document Object Model
+
+    Principais bibliotecas = React, Vue, Angular, Svelte...
+
+    Formas de executar JavaScript:
+    Padrão: arquivo importado no HTML;
+    Diretamente no vavegador, atraves do console;
+    Por meio de aplicações, coo JS Filddle;
+
+    Repositorio Git:
+    Arquivos do curso: https://github.com/matheusbattisti/javascript_completo
+
+TIPOS DE DADOS
+        É a forma de classificar um dado;
+        Temos como dado: "texto", 15, true, []
+        Os tipos de dados mais comuns são:
+        Number;
+        String;
+        Boolean;
+        Empty values (null, undefined);
+        Object;
+
+        Number: é todo tipo de dado para valores numericos;
+        eM JS todos os numeros são considerados Number;
+        Sejam eles: inteiros, ponto flutuantes(flout) ou negativos;
+        Note que nas linguagem de programação as casas decimais são apos o caractere ponto(15.8);
+        Em JavaScript typeof exibe o tipo do dado;
+Comentarios em JavaScript:
+// comentario de uma linha
+
+comentario de multiplas linhas
+/* 
+...
+...
+/*
+
+Aritmetica com numeros  
+    Podemos realizar operações aritimeticas na programação;
+    Operadorea como: +,-,*,/ podem ser utilizados;
+    Exemplo: console.log(2+5);
+    A ordem matematia tambem é respeitada na prigramação, exemplo: console log(5=(4*12));
+
+Special Numbers: são dados consisderados como numeros, mas não funcionam como eles;
+Eles são/;
+    Infinity;
+    -Infinity;
+    NaN(Not a Namber);
+Algunas operações podem resultar nestes valores;
+
+Strigs
+    Strings são strings;
+    Em JavaScript temos três formas de criar dados do tipo texto;
+    Desta maneira: console.log("teste"), console.log('teste'), console.log(`teste`)
+    O efeito final é o mesmo, mas cada um destes recursos tem particularidades diferentes
+    Uma strin deve sempre comecar e terminar com o mesmo caractere(",',`);
+    Ha algumas combinações que tem efeitos intereçantes nas strings;
+    Por exemplo \n, ele pula uma linha no texto;
+    exemplo: console.log("Text em \n Duas linhas");
+
+    Concatenação: recrsoque une dois ou mais textos;
+    O operador da concatenação é o +;
+    Exemplo/; "meu texto" + "texto" + "combinado";
+    Melhor uso com variaveis;
+
+    Interpolação(Template Sstrings)
+    A Interpolação é um recurso semelhante a concatenação;
+    Mas nos possibilita a escrever tudo na mesma string;
+    Esta deve ser escrita `entre crases`;
+    Podemos excutar codigo JavaScript COM ${algum codigo};
+
+Boolenas
+    Os booleans possuem apenas dois valores: true oi false;
+    Qualquer comparação, utilizando >, <, ==, resulta em um booleano;
+    Importante para estruturas de repetição e condicionais;   
+
+Comparações
+    As  comparações que podemos utilizar são/;
+    Maior e menos: > e <
+    Maior ou igual e menor ou igual: >= e <=;
+    Igual: ==;
+    Diferente: !=;
+    Idendico: ===;   
+
+    comparação de idendico
+    Os operadores === e !== funcionam como == e !==;
+    Porem tambem levam em consideração o tipo de dado;
+    Estes operadores necessitam que o tipo e o dado sejam iguais/diferentes;
+    Devemos tentar ao maximo utilizar estes operadores;
+
+Operadores logicos
+    Operadores logicos servem para unir duas ou mais comparações/
+    O resultado final é um boolean;
+    && - AND - true, um lado como true é suficiente;
+    || - OR - para ser true, um lado como true é suficiente;
+    ! - NOT - este operador inverte a comparação;
+
+    Tabela verdade
+      A  |    B   | A AND B | A OR B | NOT A 
+    False|  False |  False  | False  | True 
+    False|  True  |  False  | True   | True
+    True |  False |  False  | True   | False
+    True |  True  |  True   | True   | False 
+
+Salvando valores na memoria
+    São como caitaimers, que salvam informações para quando precisamos utilizar;
+    Tems como declarar variaveis com "var", "let" e "const";
+
+    var: forma original de declarar variaveis em JavaScript, com escopo global ou de função.
+    As variaveis declaradas com "var" podem ser utilizadas e declaradas novamente, 
+    e sao içads para o topo do contexto.
+
+    let: introduzidas no ECMAScitp(ES6) para evitar alguns problemas associados ao var, com escopo de bloco. 
+    As variaveis declaradas com let podem ser utilizadas, mas não podem ser declaradas novamente.
+
+    const: Tabem introduzidas no ES6 para declarar constantes, ou seja, valores que não podem ser reatribuidos.
+    As variaveis declaradas com const não podem ser atualizadas nem declaradas novamente.
+
+    A recomendação é evitar o uso de var, a menos que se esteja lidando com código legado que precise ser mantido.
+    O uso de let é preferido, pois evita que ocorram conflitos em códigos extensos, criados por mais de uma pessoa. 
+
+    As constantes declaradas com const têm escopo de bloco. 
+    Isso significa que elas só podem ser acessadas no bloco de código em que são declaradas. 
+    A principal diferença entre var e let é o escopo. Variáveis declaradas com var têm escopo global ou de função,
+    enquanto variáveis declaradas com let têm escopo de bloco.
+
+    Podemos criar variaveis em sequencia:
+    let a = 5, b = 4, c = 10
+    Evitar esta pratica por dificultar a legibilidade do codigo.
+    Não podemos começar variaveis com numeros;
+    Tambem não podemosutilizar alguns caracteres especias, como @.
+    Simbolos permitidos para criar variaveis: "_" e "$"
+    let _teste = "ok"
+    let $teste = "ok"
+    As variaveis são case sensitive; distinguem minusculas de maiusculas.
+    exemplo: let a = 1, let A = 2
+
+    Palavras reservadas a linguagem JS.
+
+O ambiente JavaScript
+    Quando um programa é iniciado, um ambiente é criado;
+    Neste ambiente temos diversas funções e objetos da linguagem JavaScript;
+    Exemplo: console e alert;
+    Todo programa terá acesso a elas;
+    Oambiente no caso é o navegador;
+
+Estrutura de uma função
+    Uma funçaõ é um bloco de codigo que pode ser reaproveitado ao longo do nosso programa;
+    Incocamos/chamamos ela pelo seu nome, e tambem o uso de parenteses/; funcao();
+    Tambem podemos inserir parametros, que deixam a execusão da função unica,
+    exemplo: soma(a,b)
+    Utilizamos algumas funções até então, como log(metodo dentro da função console) de console;  
+
+Funções do JS
+    prompt
+    A função prompt recebe um dado do usuario;
+    Podemos salvar este valor em uma variavek;
+    exemplo:
+    const x = prompt("digite um numero:")
+    Uma função pouco utilizada, mas nos permite fazer ações interessantes.
+
+    alert
+    A função aler emite uma mensagem na tela por um pop up;
+    Tambem não é muito utilizada, mas é um classico de JavaScript;
+
+    Math.x
+    Math é um objeto, que possui diversas funções para fins matematicos;
+    exemplo:
+        max: encontra o maior numero;
+        min: encontra o menor numero;
+        floor: arredonda para baixo o numero;
+        ceil: arredonda para baixo o numero;
+
+Extrutura de ondicional: if 
+    O if é muito usado na programação em geral;
+    Temos um bloco de codico sendo excutado, se uma condição for verdadeira;
+    A condição é validada por um bolean gerado após a execusão do trecho de codigo no if;
+
+Extrutura de condicional: else
+    O else executa quando o if nãoatende sua condição;
+    Ou seja, não temos um bloco de validação, apenas do que sera executado;
+Aideia é: algo se x > 5, se não execute isto;
+
+Extrutura de condicional: else if(elif empython)
+    O eslse if é uma estrutura intermediaria de if e do else;
+    É possivel adicionar novas validações, como no if;
+    Assim temos a possibilidade de criar varias validações, para resolver nosso problema;
+
+Estruturas de repetição
+    Um bloco de codigo que se repete até uma condição ser satisfeita;
+    Isso evita repetição desnecessaria do codigo;
+    Algumas das estruturas são: for e while;
+    As estruturas são diferentes, mas as duas chegam no mesmo resultado;
+    Temos que nos atentar ao loop infinito;
+
+Estrutura de repetição: while
+    O while faz uma ação até que uma condição seja atingida;
+    No bloco definimos o fim do loop, que é a condicição;
+    Temos que definir tambem um incrementador, que é quem faz a condição ser atingida;
+
+Estrutura de repetição: do while
+    O do while tambem é uma estrutura que permite repetição;
+    A sintaxe é semelhante ao while;
+    ESte recurso não é tão utilizado;
+
+Estrutura de repetição: for
+    O for é a estrutura de repetição mais utilizada;
+    Ela condensa toda lógica em uma linha, aomprimeiro olhar parece mais complexa, mas simplifica as coias;
+    Na propria declaração, colocamos: incrementador, condição final e progressão;   
+
+Forçando saida do loop
+    Com a instrução break podemos ejetar um loop,
+    fazendo que com as repetições cessem;
+    isso pode poupar memoria, pois o codigo será executado menos vezes;
+    Não é tão comum, mas é um recurso valido da linguagem,
+
+Pulando uma execuçaaõ do loop
+    Apalavra reservada continue, pode pular uma ou mais execuções do loop;
+    É um recurso utilizado de forma semelhante ao break;
+
+Estrutura condiciional: switch    
+    O switch pode ser utilizado para organização de um excesso de if/else;
+    Cada if seria um case;
+    Para cada case, temos que adicionar um break;
+    E temos o default, que é como o else
+
+
+
+
+
+

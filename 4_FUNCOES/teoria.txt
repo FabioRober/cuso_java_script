@@ -1,0 +1,12 @@
+Funções
+    Estruturas de codigo menores, podemos dividir nosso codigo em varias funções;
+    O ideal é que cada funçaõ tenha apenas um único objetivo;
+    Isso nos faz poupar codigo, poispodemos reutiliza-las;
+    Alinguagem tem varias já criadas, e nós podemos criar as nossas;
+
+Definindo funções
+    A estrura da função é um pouco mais complexa;
+    Primeiramente utilizamos a palavra function, isso inicia a funçãoPrecisamos depois nomea-la;
+    Os parametros, que são uma espécie de configuração, ficam entre () depois do nome;
+    O corpo da função fica entre {};
+    Geralmente uma função retorna um valor;    
